@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import axios from 'axios';
 import { FiMapPin, FiWind, FiDroplet, FiThermometer, FiSearch, FiRefreshCw, FiX, FiZap } from 'react-icons/fi';
-import { WiDaySunny, WiNightClear, WiCloudy, WiRain, WiThunderstorm, WiSnow, WiFog, WiDayRainMix, WiNightRain, WiNightAltCloudy } from 'react-icons/wi';
+import { WiDaySunny, WiNightClear, WiCloudy, WiRain, WiThunderstorm, WiSnow, WiFog, WiDayRainMix, WiNightRain } from 'react-icons/wi';
 import '../styles/Weather.css';
 import API_URL from '../config';
 

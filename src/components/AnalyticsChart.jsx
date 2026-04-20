@@ -29,9 +29,8 @@ export default function AnalyticsChart({ token }) {
   const [stats, setStats] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchAnalytics();
-  }, [token]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => { fetchAnalytics(); }, [token]);
 
   const fetchAnalytics = async () => {
     try {

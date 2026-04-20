@@ -42,7 +42,7 @@ export default function ChatAI({ token, onRelayChange }) {
     } finally {
       setLoading(false);
     }
-  }, [token]);
+  }, [token, onRelayChange]);
 
   const startListening = useCallback(() => {
     if (!SR) {

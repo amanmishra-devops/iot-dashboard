@@ -1,0 +1,232 @@
+/* ── Layout ── */
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #131314;
+}
+
+.main-content {
+  margin-left: 260px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #131314;
+}
+
+/* ── Page Header (Google AI Studio style) ── */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 36px;
+  border-bottom: 1px solid #2a2b2e;
+  flex-shrink: 0;
+  background: #131314;
+}
+
+.page-header-left h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e8eaed;
+  letter-spacing: -0.02em;
+}
+
+.page-header-left p {
+  font-size: 12px;
+  color: #5f6368;
+  margin-top: 2px;
+}
+
+.page-header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #2a2b2e;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 500;
+  color: #9aa0a6;
+  font-family: 'Poppins', sans-serif;
+  cursor: default;
+  letter-spacing: 0.01em;
+}
+
+.header-chip .chip-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+}
+.header-chip .chip-dot.on  { background: #22c55e; box-shadow: 0 0 6px #22c55e88; }
+.header-chip .chip-dot.off { background: #444; }
+
+/* ── Section Wrapper ── */
+.section-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.section-body {
+  flex: 1;
+  padding: 28px 36px 36px;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-body.centered {
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Shared Card ── */
+.card {
+  background: #1a1b1e;
+  border: 1px solid #2a2b2e;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.card-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #5f6368;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 18px;
+}
+
+/* ── Device Panel ── */
+.device-page {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 36px 36px;
+}
+
+.device-panel {
+  background: #1a1b1e;
+  border: 1px solid #2a2b2e;
+  border-radius: 16px;
+  padding: 48px 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.device-state-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.device-circle {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 1.5px solid #2a2b2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
+}
+.device-circle.on {
+  border-color: #22c55e44;
+  background: #0a1f10;
+  box-shadow: 0 0 32px #22c55e1a, 0 0 64px #22c55e08;
+  color: #22c55e;
+}
+.device-circle.off {
+  background: #1e1f22;
+  color: #333;
+}
+
+.device-state-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e8eaed;
+  letter-spacing: -0.01em;
+}
+
+.device-state-meta {
+  font-size: 11px;
+  color: #5f6368;
+}
+
+/* ── Buttons ── */
+.device-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.action-btn {
+  padding: 13px 0;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: 1px solid #2a2b2e;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.01em;
+}
+.action-btn:disabled { opacity: 0.2; cursor: not-allowed; }
+
+.action-btn.on  { color: #22c55e; border-color: #1a3024; }
+.action-btn.on:hover:not(:disabled)  { background: #0a1f10; border-color: #22c55e33; }
+
+.action-btn.off { color: #ef4444; border-color: #2a1c1c; }
+.action-btn.off:hover:not(:disabled) { background: #1f0a0a; border-color: #ef444433; }
+
+/* ── Info Grid ── */
+.device-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.info-tile {
+  background: #111213;
+  border: 1px solid #2a2b2e;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.info-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #5f6368;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+}
+
+.info-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e8eaed;
+}
+.info-value.on  { color: #22c55e; }
+.info-value.off { color: #5f6368; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .main-content { margin-left: 0; }
+  .page-header { padding: 16px 20px; }
+  .section-body { padding: 20px; }
+  .device-page { padding: 20px; }
+  .device-panel { padding: 28px 20px; }
+}

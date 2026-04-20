@@ -14,6 +14,26 @@
   background: #131314;
 }
 
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 150;
+  background: #1a1b1e;
+  border: 1px solid #2a2b2e;
+  border-radius: 8px;
+  color: #9aa0a6;
+  padding: 7px 8px;
+  cursor: pointer;
+  line-height: 0;
+}
+
+@media (max-width: 768px) {
+  .main-content { margin-left: 0; }
+  .hamburger { display: flex; }
+}
+
 /* ── Page Header (Google AI Studio style) ── */
 .page-header {
   display: flex;

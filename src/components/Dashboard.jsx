@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { FiPower } from 'react-icons/fi';
+import { FiPower, FiMenu } from 'react-icons/fi';
 import Sidebar from './Sidebar';
 import ChatAI from './ChatAI';
 import Weather from './Weather';
@@ -31,6 +31,7 @@ function PageHeader({ title, subtitle, relayState }) {
 export default function Dashboard({ token, onLogout }) {
   const [active, setActive] = useState('device');
   const [relayState, setRelayState] = useState('off');
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [lastAction, setLastAction] = useState('');
 
@@ -106,8 +107,17 @@ export default function Dashboard({ token, onLogout }) {
 
   return (
     <div className="app-layout">
-      <Sidebar active={active} setActive={setActive} relayState={relayState} onLogout={onLogout} />
-      <main className="main-content">{SECTIONS[active]}</main>
+      <Sidebar
+        active={active} setActive={setActive}
+        relayState={relayState} onLogout={onLogout}
+        isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)}
+      />
+      <main className="main-content">
+        <button className="hamburger" onClick={() => setSidebarOpen(true)}>
+          <FiMenu size={20} />
+        </button>
+        {SECTIONS[active]}
+      </main>
     </div>
   );
 }

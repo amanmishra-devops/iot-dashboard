@@ -10,9 +10,16 @@ const NAV = [
   { id: 'logs',      icon: FiList,          label: 'Activity Log'   },
 ];
 
-export default function Sidebar({ active, setActive, relayState, onLogout }) {
+export default function Sidebar({ active, setActive, relayState, onLogout, isOpen, onClose }) {
+  const handleNav = (id) => {
+    setActive(id);
+    onClose?.();
+  };
+
   return (
-    <aside className="sidebar">
+    <>
+      {isOpen && <div className="sidebar-overlay" onClick={onClose} />}
+      <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
       <div className="sidebar-brand">
         <div className="brand-logo">
           <span className={`brand-dot ${relayState}`} />
@@ -29,7 +36,7 @@ export default function Sidebar({ active, setActive, relayState, onLogout }) {
           <button
             key={id}
             className={`nav-item ${active === id ? 'active' : ''}`}
-            onClick={() => setActive(id)}
+            onClick={() => handleNav(id)}
           >
             <Icon size={15} className="nav-icon" />
             <span>{label}</span>
@@ -54,5 +61,6 @@ export default function Sidebar({ active, setActive, relayState, onLogout }) {
         </button>
       </div>
     </aside>
+    </>
   );
 }

@@ -160,7 +160,7 @@ REACT_APP_WEATHER_API_KEY=your-owm-key
 
 ---
 
-## Team
+## Team Members
 
 | Name | Enrollment No. | Role |
 |---|---|---|

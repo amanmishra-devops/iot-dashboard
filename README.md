@@ -1,4 +1,4 @@
-# NexHome — IoT Smart Home Automation Dashboard
+# NexHome — IoT cloud-connected Smart Home Automation
 
 ## Overview
 

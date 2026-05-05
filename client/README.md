@@ -171,3 +171,5 @@ REACT_APP_WEATHER_API_KEY=your-owm-key
 | Jothibasu | 23UPE048 | Member |
 
 ---
+
+*NexHome © 2025 — Department of UPE*
